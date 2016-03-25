@@ -8,6 +8,6 @@
 # Installation #
 
 ```bash
-$ composer require purplefan/dcodes
+$ composer require purplefan/dcodes dev-master
 ```
 
