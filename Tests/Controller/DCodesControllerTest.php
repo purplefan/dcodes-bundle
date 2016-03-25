@@ -12,6 +12,6 @@ class DCodesControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertContains('Hello World', $client->getResponse()->getContent());
+        $this->assertContains('generator', $client->getResponse()->getContent());
     }
 }

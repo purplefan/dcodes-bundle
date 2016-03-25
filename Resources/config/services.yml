@@ -1,4 +1,9 @@
 services:
-#    god_codes.example:
-#        class: GO\DCodesBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+  god_codes.digitletters_engine:
+    class: GO\DCodesBundle\Generator\DigitsLettersGenerator\DigitsLettersEngine
+    public: false
+
+  god_codes.digitlettersgenerator:
+    class: GO\DCodesBundle\Generator\DigitsLettersGenerator\DigitsLettersGenerator
+    arguments: ["@god_codes.digitletters_engine"]
+
