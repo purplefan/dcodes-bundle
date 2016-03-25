@@ -20,7 +20,7 @@ class GenerateCodeCommand extends ContainerAwareCommand
     {
         $this->setName('code:generate')
             ->setDescription('Generates discount code')
-            ->addArgument('length', InputArgument::REQUIRED, 'Length of discount code');
+            ->addArgument('length', InputArgument::REQUIRED, 'Length of discount code (4 - 1000)');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

@@ -15,8 +15,8 @@ class GenerateCodesCommand extends ContainerAwareCommand
     {
         $this->setName('codes:generate')
             ->setDescription('Generates discount code')
-            ->addArgument('length', InputArgument::REQUIRED, 'Length of discount code')
-            ->addArgument('count', InputArgument::REQUIRED, 'Count of discount code');
+            ->addArgument('length', InputArgument::REQUIRED, 'Length of discount code (4 - 1000)')
+            ->addArgument('count', InputArgument::REQUIRED, 'Count of discount code (1 - 1000000)');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

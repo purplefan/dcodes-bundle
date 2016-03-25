@@ -12,7 +12,7 @@ namespace GO\DCodesBundle\Generator\DigitsLettersGenerator;
 class DigitsLettersEngine
 {
     /**
-     * Gets the code with out similar looking letters and digits eg. 1 I l 
+     * Gets the code without similar looking letters and digits eg. 1 I l
      * 
      * @param $length of code
      * 
