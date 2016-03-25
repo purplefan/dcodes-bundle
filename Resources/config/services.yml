@@ -3,7 +3,7 @@ services:
     class: GO\DCodesBundle\Generator\DigitsLettersGenerator\DigitsLettersEngine
     public: false
 
-  god_codes.digitlettersgenerator:
-    class: GO\DCodesBundle\Generator\DigitsLettersGenerator\DigitsLettersGenerator
+  god_codes.codegenerator:
+    class: GO\DCodesBundle\Generator\CodeGenerator
     arguments: ["@god_codes.digitletters_engine"]
 

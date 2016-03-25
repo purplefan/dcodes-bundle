@@ -1,7 +1,8 @@
 <?php
-namespace GO\DCodesBundle\Generator\DigitsLettersGenerator;
+namespace GO\DCodesBundle\Generator;
 
 use GO\DCodesBundle\Generator\GeneratorInterface;
+use GO\DCodesBundle\Generator\EngineInterface;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\Security\Core\Exception\InvalidArgumentException;
 
@@ -9,9 +10,9 @@ use Symfony\Component\Security\Core\Exception\InvalidArgumentException;
  * Class DigitsLettersGenerator
  * @author Grzegorz Olejarz
  *
- * @package GO\DCodesBundle\Generator\DigitsLettersGenerator
+ * @package GO\DCodesBundle\Generator
  */
-class DigitsLettersGenerator implements GeneratorInterface
+class CodeGenerator implements GeneratorInterface
 {
 
     private $engine;
@@ -22,9 +23,9 @@ class DigitsLettersGenerator implements GeneratorInterface
     /**
      * DigitsLettersGenerator constructor.
      *
-     * @param DigitsLettersEngine $engine
+     * @param EngineInterface $engine
      */
-    public function __construct(DigitsLettersEngine $engine)
+    public function __construct(EngineInterface $engine)
     {
         $this->engine = $engine;
     }

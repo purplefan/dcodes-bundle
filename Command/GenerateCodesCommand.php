@@ -24,7 +24,7 @@ class GenerateCodesCommand extends ContainerAwareCommand
         $length = $input->getArgument('length');
         $count = $input->getArgument('count');
         $options = new ParameterBag(array('length'=>$length));
-        $code = $this->getContainer()->get('god_codes.digitlettersgenerator')->generateDiscountCodes($count, $options);
+        $code = $this->getContainer()->get('god_codes.codegenerator')->generateDiscountCodes($count, $options);
 
         $output->writeln($code);
     }

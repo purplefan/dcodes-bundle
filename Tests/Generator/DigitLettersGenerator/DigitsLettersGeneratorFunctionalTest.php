@@ -22,7 +22,7 @@ class DigitsLettersGeneratorFunctionalTest extends ContainerTestCase
      */
     protected function setUp()
     {
-        $this->generator = $this->getContainer()->get('god_codes.digitlettersgenerator');
+        $this->generator = $this->getContainer()->get('god_codes.codegenerator');
     }
 
     /**
@@ -44,7 +44,7 @@ class DigitsLettersGeneratorFunctionalTest extends ContainerTestCase
     {
         $count = 1000;
         $options = new ParameterBag(array('length' => 10));
-        $codes = $this->getContainer()->get('god_codes.digitlettersgenerator')->generateDiscountCodes($count,$options);
+        $codes = $this->getContainer()->get('god_codes.codegenerator')->generateDiscountCodes($count,$options);
 
         return array(array($codes));
     }

@@ -22,7 +22,7 @@ class DigitsLettersGeneratorTest extends ContainerTestCase
      */
     protected function setUp()
     {
-        $this->generator = $this->getContainer()->get('god_codes.digitlettersgenerator');
+        $this->generator = $this->getContainer()->get('god_codes.codegenerator');
     }
 
     /**

@@ -25,7 +25,7 @@ class DCodesController extends Controller
     public function getCodesAction(Request $request)
     {
         $count = $request->request->get('count');
-        $data = $this->get('god_codes.digitlettersgenerator')->generateDiscountCodes($count, $request->request);
+        $data = $this->get('god_codes.codegenerator')->generateDiscountCodes($count, $request->request);
 
         return new JsonResponse($data);
     }

@@ -1,15 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Grzegorz
- * Date: 2016-03-25
- * Time: 11:25
- */
-
 namespace GO\DCodesBundle\Generator\DigitsLettersGenerator;
+use GO\DCodesBundle\Generator\EngineInterface;
 
-
-class DigitsLettersEngine
+/**
+ * Class DigitsLettersEngine
+ * @author Grzegorz Olejarz
+ * @package GO\DCodesBundle\Generator\DigitsLettersGenerator
+ */
+class DigitsLettersEngine implements EngineInterface
 {
     /**
      * Gets the code without similar looking letters and digits eg. 1 I l
