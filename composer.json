@@ -1,21 +1,24 @@
 {
   "name": "purplefan/dcodes",
-  "license": "MIT",
-  "type": "project",
+  "type": "library",
   "description": "Discount codes generator",
-  "autoload": {
-    "psr-0": { "GO\\DCodesBundle": "" }
-  },
-  "require": {
-    "php": ">=5.3.9",
-    "symfony/symfony": "2.8.*"
-  },
-  "homepage": "http://olejarz.net",
+  "keywords": ["codes","generator"],
+  "homepage": "https://github.com/purplefan/dcodes",
+  "license": "MIT",
   "authors": [
     {
       "name": "Grzegorz Olejarz",
-      "homepage": "http://olejarz.net"
+      "email": "grzegorz@olejarz.net",
+      "homepage": "https://github.com/purplefan",
+      "role": "Developer"
     }
   ],
-  "minimum-stability": "dev"
+  "require": {
+    "php": ">=5.3.9"
+  },
+  "autoload": {
+    "psr-0": {
+      "DCodesBundle": "src"
+    }
+  }
 }
