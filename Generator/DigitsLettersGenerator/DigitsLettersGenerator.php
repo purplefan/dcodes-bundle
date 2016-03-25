@@ -1,8 +1,6 @@
 <?php
 namespace GO\DCodesBundle\Generator\DigitsLettersGenerator;
 
-
-use GO\DCodesBundle\Generator\count;
 use GO\DCodesBundle\Generator\GeneratorInterface;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\Security\Core\Exception\InvalidArgumentException;
@@ -18,6 +16,9 @@ class DigitsLettersGenerator implements GeneratorInterface
 
     private $engine;
 
+    const MAX_LENGTH = 1001;
+    const MAX_COUNT = 1000001;
+
     /**
      * DigitsLettersGenerator constructor.
      *
@@ -31,13 +32,16 @@ class DigitsLettersGenerator implements GeneratorInterface
     public function generateDiscountCode(ParameterBag $options)
     {
         $length = $options->get('length');
+        if (0 > $length || self::MAX_LENGTH < $length) {
+            throw new InvalidArgumentException("Wrong number of codes");
+        }
 
         return $this->engine->getCode($length);
     }
 
     public function generateDiscountCodes($count, ParameterBag $options)
     {
-        if (0 > $count || 1000000 < $count) {
+        if (0 > $count || self::MAX_COUNT < $count) {
             throw new InvalidArgumentException("Wrong number of codes");
         }
         $codes = array();
@@ -45,6 +49,6 @@ class DigitsLettersGenerator implements GeneratorInterface
             $codes[] = $this->generateDiscountCode($options);
         }
 
-        return $codes;
+        return array_values(array_unique($codes));
     }
 }

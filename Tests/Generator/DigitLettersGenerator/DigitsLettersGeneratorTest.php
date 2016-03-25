@@ -42,7 +42,7 @@ class DigitsLettersGeneratorTest extends ContainerTestCase
      */
     public function testGenerateDiscountCodes()
     {
-        $count = 100; //limit 1000000
+        $count = 100; //limit 1000000*10
         $options = new ParameterBag(array('length' => 10));
         $codes = $this->generator->generateDiscountCodes($count,$options);
 
