@@ -1,0 +1,4 @@
+god_codes:
+    resource: "@GODCodesBundle/Controller/"
+    type:     annotation
+    prefix:   /

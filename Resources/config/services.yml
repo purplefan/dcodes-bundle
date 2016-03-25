@@ -1,0 +1,4 @@
+services:
+#    god_codes.example:
+#        class: GO\DCodesBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
